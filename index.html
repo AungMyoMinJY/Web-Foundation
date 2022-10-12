@@ -4,31 +4,48 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>
+		.styled {
+			background: blue;
+			display: block;
+		}
+		#hiddenbox {
+			width: 300px;
+			height: 50px;
+			background: cyan;
+			display: none;
+		}
+		#canvas {
+			widows: 100px;
+			height: 50px;
+			background: blue;
+		}
+	</style>
+
+	<script src="jquery-3.6.1.min.js"></script>
+
 </head>
 <body>
+	<button id="clickme">Click Me</button>
+	<div id="hiddenbox"></div>
 
-	<h1>Hello World</h1>
-
-
+	<div id="canvas"></div>
+	<h3 id="shower"></h3>
 
 	<script>
-	var condition = false ;
-	while (condition == false) {
-		var x = prompt('Enter your name: ');
-		if (x == 'JY') {
-			y = prompt('Enter your password: ');
-			while (1) {
-				if (y == '1234') {
-					confirm('success');
-					break;
-				}
-				else {
-					y = prompt('Enter your password: ');
-				}
-			var condition = true;
-			}
+		$('#clickme').click(function () {
+			$('#hiddenbox').toggle()
+
+		})
+		$('#canvas').click(function(e){ show_event(e) })
+		$('#canvas').hover(function(e){ show_event(e) })
+		$('#canvas').dblclick(function(e){ show_event(e) })
+
+		function show_event (e) {
+			$('#shower').html('event type : ' + e.type)
 		}
-	}
-</script>
+
+
+	</script>
 </body>
 </html>
