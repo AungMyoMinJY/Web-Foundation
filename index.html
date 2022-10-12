@@ -3,65 +3,74 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Student Registeration Form</title>
 	<style>
-		body {
-			background: #ffffff;
-		}
-		div {
-			background: white;
-			padding: 50px;
-			margin: 30px;
-			border: 3px	solid black;
-			border-radius: 10px;
-			box-shadow: 5px 5px 8px #999999;
-		}
-		h2 {
-			border-bottom: 5px solid black;
-			padding-bottom: 10px;
-			margin-bottom: 10px;
-		}
-		a {
-			color: whitesmoke;
-			background: grey;
-			padding: 6px 8px;
-			text-decoration: none;
-			text-transform: uppercase;
-			border-radius: 5px;
-			font-size: 12px;
-		}
+		h1 {
 
-	</style>
+		}
+		td {
+			padding-right: 40px;
+		}
+		td	{
+			padding-bottom: 5px;
+		}
+	</style>	
 </head>
 <body>
+	<h1>Student Registration Form</h1>
 
-	<div>
-	<h2>
-		This is the title of the post</h2>
+	<form action="#">
+		<table>
+			<tr>
+				<td><label for="name">Name</label></td>
+				<td><input required type="text" placeholder="နာမည်" name="name"	id="name"></td>
+			</tr>
+			<tr>
+				<td><label for="dob">Date of Birth</label></td>
+				<td><input type="date" name="dob" id="dob"></td>
+			</tr>
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<a href="#">Read More</a>
-	</div>
-
-	<div>
-	<h2>
-		This is the title of the post</h2>
-
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<a href="#">Read More</a>
-	</div>
-	
+			<tr>
+				<td>Gender</td>
+				<td><label for="male">Male</label>
+					<input type="radio" name="gender" id="male">
+					<label for="female">Female</label>
+					<input type="radio" name="gender" id="female">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="email">Email</label></td>
+				<td><input type="email" name="email" id="email"></td>
+			</tr>
+			<tr>
+				<td><label for="class">Class</label></td>
+				<td>
+					<select name="calss" id="class">
+						<option value="">Choose Class</option>
+						<option value="kg">Kinder Garden</option>
+						<option value="g1">Grade 1</option>
+						<option value="g2">Grade 2</option>
+						<option value="g3">Grade 3</option>
+						<option value="g4">Grade 4</option>
+					</select>
+				</td>
+			</tr>
+				<tr>
+				<td><label for="pp">Profile Picture</label></td>
+			<td><input type="file" name="pp" id="pp"></td>
+			</tr>
+			<tr>
+				<td><label for="address">Address</label></td>
+				<td><textarea name="address" id="address" cols="30" rows="5" placeholder="လိပ်စာဖြည့်ရန်"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="submit">
+					<input type="reset" value="reset">
+				</td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
