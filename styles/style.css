@@ -1,0 +1,230 @@
+@font-face {
+	font-family: Marcellus;
+	src: url('../fonts/Marcellus/Marcellus-Regular.ttf');
+}
+@font-face {
+	font-family: 'Open Sans';
+	src:  url('../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf');
+}
+body, body * {
+	color:  #262626;
+	font-family: 'Open Sans', Tahome, Arial, sans-serif;
+	font-size:  16px;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Marcellus, Times New Roman, Georgia, Serif;
+	text-transform: uppercase;
+}
+
+h1 { font-size:  2.5em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size:  1.2em; }
+h5 { font-size:  1em; }
+h6 { font-size:  0.7em; }
+
+.cf-color-black { color:  #262626; }
+.cf-background-black { background:  #262626; }
+.cf-color-white { color: #eeeeee; }
+
+.overlay {
+	width:  100%;
+	height:  100%;
+	background: rgba(38, 38, 38, 0.4);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align:  center;
+	padding:  0 2em;
+	box-sizing:  border-box;
+}
+.overlay * {
+	color:  #eeeeee;
+	display: block;
+}
+
+.heading {
+	display:  inline-block;
+	position:  relative;
+	margin-bottom:  50px;
+}
+.heading:after {
+	content: '.';
+	background:  #BE9C79;
+	width:  30%;
+	height:  4px;
+	position:  absolute;
+	bottom:  -15px;
+	left: 40%;
+	overflow:  hidden;
+}
+
+/* ##### Header ##### */
+header {
+	height:  70px;
+	padding:  0 100px;
+}
+
+.navigation {
+	height:  100%;
+	display:  flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.navigation li {
+	list-style: none;
+}
+.navigation li a {
+	text-decoration: none;
+	font-family: Marcellus, Times New Roman, Georgia, Serif;
+	text-transform: uppercase;
+	padding:  5px 10px;
+	margin:  0 5px;
+}
+
+/* ##### Hero ##### */
+.hero {
+	width:  100%;
+	height: 650px;
+	background:  url('../images/Hero.jpg') center no-repeat;
+	background-size:  cover;
+}
+.hero .overlay h1 { font-size: 4em; }
+.hero .overlay h3 {
+	font-size: 3em;
+	letter-spacing: 0.08em;
+	margin-top:  10px;
+}
+
+/* ##### Service ##### */
+.service {
+	padding:  100px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.service p {
+	width:  50%;
+	margin-bottom: 50px;
+	line-height: 1.75em;
+}
+.service a {
+	text-decoration: none;
+	padding:  15px 30px;
+	background: #EF2853;
+	border-radius:  7px;
+	font-family: Marcellus, Times New Roman, Georgia, Serif;
+	text-transform: uppercase;
+}
+
+/* ##### Menu ##### */
+.menu .drink, .menu .food {
+	display: flex;
+}
+.menu-item {
+	width:  25%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 320px;
+}
+.drink .menu-item:first-child {
+	background-image:  url('../images/Menu/Coffee.jpg');
+}
+.drink .menu-item:nth-child(2) {
+	background-image: url('../images/Menu/BubbleTea.jpg');
+}
+.drink .menu-item:nth-child(3) {
+	background-image: url('../images/Menu/SoftDrink.jpg');
+}
+.drink .menu-item:last-child {
+	background-image: url('../images/Menu/Beverage.jpg');
+}
+
+.food .menu-item:first-child {
+	background-image:  url('../images/Menu/Cake.jpg');
+}
+.food .menu-item:nth-child(2) {
+	background-image: url('../images/Menu/Lunch.jpg');
+}
+.food .menu-item:nth-child(3) {
+	background-image: url('../images/Menu/Breakfast.jpg');
+}
+.food .menu-item:last-child {
+	background-image: url('../images/Menu/Dessert.jpg');
+}
+
+.menu-item .overlay .heading:after {
+	background:  #eeeeee;
+}
+.menu-item .overlay {
+	opacity: 0;
+}
+.menu-item:hover > .overlay {
+	opacity: 1;
+}
+
+/* ##### Shops ##### */
+.shops {
+	padding: 100px 0;
+	text-align: center;
+	background: url('../images/pattern.png') repeat;
+}
+.shop-wrapper {
+	display: flex;
+	justify-content: center;
+	column-gap: 50px;
+}
+.shop-item {
+	width: 250px;
+}
+.shop-item .shop-img {
+	width: 100%;
+	height: 340px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
+}
+.shop-item:first-child .shop-img {
+	background-image: url('../images/Shops/Shop1.png');
+}
+.shop-item:nth-child(2) .shop-img {
+	background-image: url('../images/Shops/Shop2.png');
+}
+.shop-item:last-child .shop-img {
+	background-image: url('../images/Shops/Shop3.png');
+}
+
+/* ##### Unplugged ##### */
+.unplugged {
+	display: flex;
+	overflow: hidden;
+}
+.unplugged img {
+	width: 65%;
+	margin-top: -90px;
+	margin-bottom: -90px;
+}
+.unplugged .unplugged-content {
+	width: 35%;
+	padding: 30px;
+}
+.unplugged-content .heading {
+	margin-bottom: 20px;
+}
+.unplugged-content .heading::after {
+	left: 0;
+}
+.unplugged-info {
+	display: flex;
+	align-items: center;
+	margin: 10px 0 15px 0
+}
+.unplugged-info svg {
+	margin-right: 15px;
+}
