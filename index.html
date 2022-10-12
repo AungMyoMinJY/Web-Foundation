@@ -1,121 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-<!-- 	<script src="jquery-3.6.1.min.js"></script>
- -->	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-<!--   	<link rel="stylesheet" href="/resources/demos/style.css">
- -->  	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-	<style>
-		body {
-			background: #fefefe;
-		}
-		#tasks {
-			width: 450px
-		}
-		#tasks li {
-			list-style: none;
-			padding: 10px 15px;
-			margin: 5px auto;
-			border-radius: 5px;
-			box-shadow:1px 1px 2px #d0d0d0;
-		}
-		#tasks li:hover {
-			background: #fafafa;
-			cursor: pointer;
-			margin: 5px 2px;
-			box-shadow: 0 0 7px #d9d9d9;
-		}
-		#taskinput {
-			padding: 7px 10px;
-			width: 300px;
-			border: 2px solid #dedede;
-			margin-left: 40px;
-		}
-		#add {
-			padding: 7px 10px;
-			}
-		#sortable { 
-			list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  		#sortable li { 
-  			margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  		#sortable li span { 
-  			position: absolute; margin-left: -1.3em; }
-		
-	</style>
+    <meta charset="utf-8">
+    <title>CKEditor 5 – Classic editor</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
 <body>
-	<form id='taskform' action="#">
-		<input type="text" name='taskinput' id='taskinput'>
-		<button id='add'>Add Task</button>
-	</div>
-	<ul id='tasks'> </ul>
+    
+  <p><img style="display: block; margin-left: auto; margin-right: auto;" title="Tiny Logo" src="https://www.tiny.cloud/docs/images/logos/android-chrome-256x256.png" alt="TinyMCE Logo" width="128" height="128"></p>
+  <h2 style="text-align: center;">Welcome to the TinyMCE editor demo!</h2>
 
+  <h2>Got questions or need help?</h2>
 
-<!-- 
+  <ul>
+    <li>Our <a href="https://www.tiny.cloud/docs/tinymce/6/">documentation</a> is a great resource for learning how to configure TinyMCE.</li>
+    <li>Have a specific question? Try the <a href="https://stackoverflow.com/questions/tagged/tinymce" target="_blank" rel="noopener"><code>tinymce</code> tag at Stack Overflow</a>.</li>
+    <li>We also offer enterprise grade support as part of <a href="https://www.tiny.cloud/pricing">TinyMCE premium plans</a>.</li>
+  </ul>
 
-	<script>
+  <h2>A simple table to play with</h2>
 
-		let data = []
+  <table style="border-collapse: collapse; width: 100%;" border="1">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Cost</th>
+        <th>Really?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TinyMCE</td>
+        <td>Free</td>
+        <td>YES!</td>
+      </tr>
+      <tr>
+        <td>Plupload</td>
+        <td>Free</td>
+        <td>YES!</td>
+      </tr>
+    </tbody>
+  </table>
 
-		$('#add').click(function() {
-			if ($('#taskinput').val() == '') {
-				alert('input something')
-			}
-			else {
-				$('#tasks').append('<li class="task">' + $('#taskinput').val() + '</li>')	
-				data.push($('#taskinput').val())
-				$('#taskinput').val('')
-			}
-		})
+  <h2>Found a bug?</h2>
 
-		$(document).on('click', '.task', function(){
-			$(this).html('<s>' + $(this).text() +  '</s>')
-			$(this).css('color', 'green')
-		})
-	</script> -->
+  <p>
+    If you think you have found a bug please create an issue on the <a href="https://github.com/tinymce/tinymce/issues">GitHub repo</a> to report it to the developers.
+  </p>
 
-	
-	<script>
-		$('#taskform').submit(function (e) {
-			e.preventDefault()
-			addTask()
-		})
-		function addTask() {
-			if ($('#taskinput').val() == null) {
-				alert('You need to type somoething in the imput')
-			}
-			else {
-				$('#tasks').append('<li class="task">' + $('#taskinput').val() + '</li>')
-				$('#taskinput').val('')
-			}
- 		}
-		$( function() {
-			$( "#tasks" ).sortable();
-		} )
-	</script>
+  <h2>Finally ...</h2>
 
-		
-		<!-- // const taskinput = document.getElementById('taskinput')
-		// const addbtn = document.getElementById ( 'add' )
-		// const tasks = document.getElementById ( 'tasks' )
+  <p>
+    Don't forget to check out our other product <a href="http://www.plupload.com" target="_blank">Plupload</a>, your ultimate upload solution featuring HTML5 upload support.
+  </p>
+  <p>
+    Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
+  </p>
 
-		// addbtn.addEventListener('click', function () {
-		// if (taskinput.value == '') {
-		// 	alert ('Input is needed')
-		// } 
-		// else {
-		// 	let task = document.createElement ('li')
-		// 	let textnode = document.createTextNode(taskinput.value)
-		// 	task.appendChild(textnode)
-		// 	tasks.appendChild(task)
-		// 	taskinput.value = ''
-		// 	}
-		// }) -->
-	
+<script>
+    tinymce.init({
+  selector: 'textarea#basic-example',
+  height: 500,
+  plugins: [
+    'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+    'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+    'insertdatetime', 'media', 'table', 'help', 'wordcount'
+  ],
+  toolbar: 'undo redo | blocks | ' +
+  'bold italic backcolor | alignleft aligncenter ' +
+  'alignright alignjustify | bullist numlist outdent indent | ' +
+  'removeformat | help',
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+});
+</script>
 </body>
 </html>
+
