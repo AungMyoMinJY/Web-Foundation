@@ -20,6 +20,15 @@
 			height: 50px;
 			background: blue;
 		}
+		#fade, #anotherfade {
+			width: 100px;
+			height: 100px;
+			background: green;
+			display: inline-block;
+		}
+		#anotherfade {
+			background: yellow;
+		}
 	</style>
 
 	<script src="jquery-3.6.1.min.js"></script>
@@ -32,19 +41,38 @@
 	<div id="canvas"></div>
 	<h3 id="shower"></h3>
 
+	<section>
+		<button id="fadeout">Fadeout</button>
+		<div id="fade"></div>
+		<div id="anotherfade"></div>
+	</section>
+
 	<script>
 		$('#clickme').click(function () {
-			$('#hiddenbox').toggle()
+		$('#hiddenbox').toggle()
 
 		})
 		$('#canvas').click(function(e){ show_event(e) })
 		$('#canvas').hover(function(e){ show_event(e) })
 		$('#canvas').dblclick(function(e){ show_event(e) })
 
+
+
 		function show_event (e) {
 			$('#shower').html('event type : ' + e.type)
 		}
+		$('#fadeout').click(function(){
+			if ($(this).text() == 'Fadeout') {
+				$(this).text('Fadein')
+			}
 
+			else {
+				$(this).text('Fadeout')
+			}
+			$('#fade').fadeToggle(2000, 'swing' , function(){
+				$('#anotherfade').fadeToggle(1000,)
+			})		
+		})
 
 	</script>
 </body>
