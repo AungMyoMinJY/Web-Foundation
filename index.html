@@ -42,9 +42,7 @@
 		<button id='add'>Add Task</button>
 	</div>
 	<ul id='tasks'>
-		<li>My daily task one</li>
-		<li>My mornin task</li>
-		<li>My Night task</li>
+		
 	</ul>
 
 
@@ -57,12 +55,16 @@
 				alert('input something')
 			}
 			else {
-				$('#tasks').append('<li>' + $('#taskinput').val() + '</li>')	
+				$('#tasks').append('<li class="task">' + $('#taskinput').val() + '</li>')	
 				data.push($('#taskinput').val())
 				$('#taskinput').val('')
 			}
 		})
 
+		$(document).on('click', '.task', function(){
+			$(this).html('<s>' + $(this).text() +  '</s>')
+			$(this).css('color', 'green')
+		})
 
 
 
