@@ -1,14 +1,331 @@
-@import	url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
-@font-face {
-			font-family: 'Ubuntu';
-			src:  url('Ubuntu/Ubuntu-Light.ttf');
-		}
-h3 {
-	font-family: 'Oswald', sans-serif;
+
+@font-face	{
+			font-family: 'Marcellus', serif;
+			font-family: 'PT Sans', sans-serif;
+			}
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=PT+Sans&display=swap');
+
+.flex {
+	display: flex;
 }
-p {
-	font-family:'Roboto Slab', serif;
+.text-w {
+	color: #ffffff;
 }
-h4 {
-	font-family: monospace;
+.heading {
+	text-transform: uppercase;
+}
+.margin {
+	margin: 30px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Marcellus, Georiga, serif;
+	text-transform: uppercase ;
+}
+
+h1 {font-size: 3em;}
+h2 {font-size: 2em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1em;}
+h5 {font-size: 0,.8em;}
+h6 {font-size: 0.7em;}
+
+nav div {
+	justify-content: space-between;	
+	padding: 25px 20px;
+}
+nav ul li a, .lo8 .flex a {
+	text-decoration: none;
+	padding: 20px 10px;
+	color: white;
+}
+nav {
+	width: 100%;
+	height: 70px;
+	background-color: #262626;
+	color: white;
+}
+.lo2 {
+	background: url('./coffee1.jpg');
+	background-position: center;
+	background-size: cover;
+	width: auto;
+	height: 700px;
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(36,36,36,0.4);
+}
+.lo2 div div {
+	padding-top: 250px;
+}
+.lo2 h1 {
+	font-size: 70px;
+	text-align: center;
+}
+.lo2 h2 {
+	letter-spacing: 15px;
+	text-align: center;
+}
+.lo3  {
+	text-align: center;
+}
+
+.lo3 p {
+	width: 38%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.underline {
+	width: 80px;
+	height: 0px;
+	border-bottom: solid red 2px;
+	margin: 0 auto;
+	margin-top: 12px;
+	margin-bottom: 10px;
+
+}
+.lo3 h1, .lo3 h2, .lo3 button {
+	margin-top: 20px;
+}
+.lo3 button {
+	font-size: 12px;
+	border-color: #ef2853;
+	background-color: #ef2853;
+	padding: 10px 14px;
+	border-radius: 8px;
+	color: white;
+	cursor: pointer;
+}
+/*.photo {
+	width: 300px;
+	height: 300px;
+}
+.lo4 .sub-nav {
+	display: none;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 100px;
+
+
+}
+.bk {
+	background-position: center;
+}
+.photo:hover>.sub-nav {
+	display: block;
+}*/
+
+.menu .menu-item {
+	width: 25%;
+	height: 400px;
+	background: red;
+}
+.menu .menu-coffee {
+	background: url('menu/coffee.png');
+	background-size: cover;
+}
+.menu .menu-bbtea {
+	background: url('menu/bbtea.png');
+	background-size: cover;
+}
+.menu .menu-sdrink {
+	background: url('menu/sdrink.png');
+	background-size: cover;
+}
+.menu .menu-bv{
+	background: url('menu/bv.png');
+	background-size: cover;
+}
+.menu .menu-cake {
+	background: url('menu/cake.png');
+	background-size: cover;
+}
+.menu .menu-noodle {
+	background: url('menu/noodle.png');
+	background-size: cover;
+}
+.menu .menu-rice {
+	background: url('menu/rice.png');
+	background-size: cover;
+}
+.menu .menu-donut {
+	background: url('menu/donut.png');
+	background-size: cover;
+}
+
+
+.menu .overlay {
+	display: none;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+/*	padding-top: 100px;*/
+}
+.menu .overlay h4 {
+	padding-top: 100px
+}
+.menu .menu-item:hover > .overlay {
+	display: block;
+}
+
+
+.lo5 {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+}
+/*.lo5 div div {
+	width: auto;
+	height: auto;
+
+}*/
+.lo5 div {
+	justify-content: center;
+
+}
+
+
+.lo5 {
+	padding: 100px 0;
+	background: url('./BG.jpeg');
+	background-repeat: repeat;
+}
+
+.lo5 h3 {
+	margin-bottom: 10px;
+}
+.shop .image {
+	width: 249px;
+	height: 350px;
+	margin: 0 auto 20px auto;
+
+}
+.shop:first-child .image {
+	background: url('shops/shop1.png');
+		background-repeat: no-repeat;
+}
+
+.shop:nth-child(2) .image {
+	background: url('shops/shop2.png');
+		background-repeat: no-repeat;
+}
+.shop:last-child .image {
+	background: url('shops/shop3.png');
+		background-repeat: no-repeat;
+}
+
+.shop div {
+	margin: 20px 0;
+}
+.lo5 .flex {
+	margin-top: 20px;
+}
+.lo5 .underline {
+	border-color: #be9c79;
+}
+.shop {
+	margin: 0 10px;
+}
+.unplugged {
+	background-size: cover;
+	/*width: 700px;*/
+	width: 60%;
+	height: 600px;
+	background-position: center;
+	background-image: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80');
+}
+
+.um {
+	width: 40%;
+	height: 100%;
+	margin: 30px;
+
+}
+.clock {
+	display: flex;
+	align-items: center;
+}
+.clock p {
+	margin-left: 5px;
+}
+.um div {
+	margin-top: 15px;
+}
+.um .underline {
+	margin-left: 0;
+	border-color: #be9c79;
+}
+.lo7 {
+	padding-top: 30px;
+	text-align: center;
+}
+.lo7 .flex div {
+	width: 200px;
+	height: auto;
+
+}
+.lo7 .flex {
+	justify-content: center;
+	column-gap: 20px;
+}
+.lo7 img {
+/*	width: 80px;*/
+	height: 80px;
+}
+
+.lo7 .underline {
+	border-color: #be9c79;
+	width: 60px;
+}
+.lo7 .flex .underline {
+	width: 30px;
+}
+.lo7 .flex div div {
+	padding-top: 20px;
+}
+.lo7 {
+	padding: 100px 0;
+	background: url('./BG.jpeg');
+	background-repeat: repeat;
+}
+
+.lo8 {
+	background-color: #262626;
+}
+.lo8 .flex {
+	margin: auto auto;
+
+}
+.d1 p:first-child  {
+	color: white;
+	margin-bottom: 3px;
+}
+.d1 p:last-child {
+	color: #ef2853;
+}
+
+
+.d1  {
+	width: 15%;
+	padding-left: 45px;
+	margin: auto 0;
+}
+.d2 {
+	width: 70%;
+	justify-content: center;
+}
+.d3 {
+	width: 15%;
+	justify-content: center;
+
+}
+.d3 img {
+	height: 30px;
+	margin: 0 5px;
+}
