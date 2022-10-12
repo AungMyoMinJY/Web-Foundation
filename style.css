@@ -1,119 +1,14 @@
-.flex {
-	display: flex;
+@import	url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@font-face {
+			font-family: 'Ubuntu';
+			src:  url('Ubuntu/Ubuntu-Light.ttf');
+		}
+h3 {
+	font-family: 'Oswald', sans-serif;
 }
-.block {
-	background-color: #e3e3e3;
+p {
+	font-family:'Roboto Slab', serif;
 }
-.block-white {
-	background-color: white;
-}
-.heading {
-	text-transform: uppercase;
-}
-.j-c-c {
-	justify-content: center;
-}
-.text-align {
-	text-align: center;
-}
-.margin-t {
-	margin-top: 20px;
-}
-.fontsize {
-	font-size: 14px;
-}
-.lo1 {
-	justify-content: space-between;
-	padding: 20px 20px
-}
-.lo1 li {
-	padding: 0 20px;
-}
-.lo1 a {
-	text-decoration: none;
-}
-.lo1 li a:hover {
-	padding-bottom: 5px;
-	border-bottom: solid white 4px;
-}
-.lo2 {
-	width: 80%;
-	height: 400px;
-	margin: 0 auto;
-}
-.lo3 ul ul{
-	width: 300px;
-	height: auto;
-}
-
-.s-d-box {
-	width: 150px;
-	height: 150px;
-}
-.lo3 .s-d-box {
-	margin:0 auto;
-}
-.hai-photo {
-	width: 400px;
-	height: 300px;
-	background-color: white;
-
-}
-.lo4 div {
-	padding: 50px 50px;
-}
-.lo4 .flex {
-	justify-content: center;
-}
-.hai-paragraph {
-	width: 500px;
-	height: 300px;
-	margin-left: 30px;
-	padding: 0 0 -5px 0;
-
-}
-.hai-paragraph li {
-	margin-bottom: 50px;
-}
-.circle {
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
-	background-color:  #e3e3e3;
-	margin: 0 auto;
-	border: solid black 1px;
-}
-
-.lo5 div ul {
-	width: 40%;
-	height: auto;
-	margin: 0 auto;
-}
-
-.lo6 .flex {
-	gap: 20px;
-}
-.lo6 div {
-	width: 660px;
-	height: auto;
-	padding: 30px 0;
-	margin: 0 auto;
-
-}
-.lo6 div h1 {
-		margin: 0 auto;
-}
-.lo6 ul li ul li {
-	margin-top: 20px;
-}
-
-.lo7 {
-	margin: 15px 0;
-}
-.lo7 li a{
-	padding: 0 10px;
-	text-decoration: none;
-}
-.margin {
-	margin-top: 30px;
-}
+h4 {
+	font-family: monospace;
