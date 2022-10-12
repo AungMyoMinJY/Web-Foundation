@@ -1,0 +1,99 @@
+@media screen and (max-width: 768px) {
+    /* ##### Header ##### */
+    header {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 0;
+    }
+    header .social {
+        display: none;
+    }
+    .header-item:not(:last-child) {
+        border-right: none;
+    }
+    .header-item {
+        justify-content: center;
+        padding: 10px;
+    }
+    header .navigation {
+        border-top: 1px solid #002207;
+    }
+
+    /* ##### Jumbotron ##### */
+    .jumbotron {
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+    }
+    .jumbotron .video {
+        border-right: none;
+        padding: 0;
+    }
+
+    /* ##### Guides ##### */
+    .guide-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .guide-item:nth-child(odd) {
+        border-right: 1px solid #002207 !important;
+    }
+    .guide-item:nth-child(even) {
+        border-right: none;
+    }
+    .guide-item:not(:last-child) {
+        border-bottom: 1px solid #002207;
+    }
+
+    /* ##### News ##### */
+    .news-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .news-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    /* ##### Fan Arts ##### */
+    .art-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .art-wrapper .action-image {
+        border-right: none !important;
+    }
+    .art-wrapper .action-image:not(:nth-child(3n + 3)) {
+        border-right: 1px solid #002207 !important;
+    }
+
+    /* ##### Footer ##### */
+    footer {
+        grid-template-columns: 1fr;
+    }
+    .foot-content iframe {
+        width: 100%;
+        max-width: 590px;
+        height: 315px;
+    }
+    .foot-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #002207;
+    }
+    .page-title {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .page-title h2 {
+        width: 100%;
+}
+.page-title div {
+        width: 100%;
+    
+}
+    .heros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .heros .action-image:not(:nth-child(2n + 2)) {
+        border-right: 1px solid #002207;
+    }
+    .heros .action-image:nth-child(2n + 2) {
+        border-right: none;
+    }
+}
