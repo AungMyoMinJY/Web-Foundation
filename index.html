@@ -4,7 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="jquery-3.6.1.min.js"></script>
+<!-- 	<script src="jquery-3.6.1.min.js"></script>
+ -->	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<!--   	<link rel="stylesheet" href="/resources/demos/style.css">
+ -->  	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<style>
 		body {
 			background: #fefefe;
@@ -33,18 +37,26 @@
 		}
 		#add {
 			padding: 7px 10px;
-		}
+			}
+		#sortable { 
+			list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  		#sortable li { 
+  			margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  		#sortable li span { 
+  			position: absolute; margin-left: -1.3em; }
+		
 	</style>
+
 </head>
 <body>
-	<div>
+	<form id='taskform' action="#">
 		<input type="text" name='taskinput' id='taskinput'>
 		<button id='add'>Add Task</button>
 	</div>
-	<ul id='tasks'>
-		
-	</ul>
+	<ul id='tasks'> </ul>
 
+
+<!-- 
 
 	<script>
 
@@ -65,11 +77,30 @@
 			$(this).html('<s>' + $(this).text() +  '</s>')
 			$(this).css('color', 'green')
 		})
+	</script> -->
 
+	
+	<script>
+		$('#taskform').submit(function (e) {
+			e.preventDefault()
+			addTask()
+		})
+		function addTask() {
+			if ($('#taskinput').val() == null) {
+				alert('You need to type somoething in the imput')
+			}
+			else {
+				$('#tasks').append('<li class="task">' + $('#taskinput').val() + '</li>')
+				$('#taskinput').val('')
+			}
+ 		}
+		$( function() {
+			$( "#tasks" ).sortable();
+		} )
+	</script>
 
-
-
-		// const taskinput = document.getElementById('taskinput')
+		
+		<!-- // const taskinput = document.getElementById('taskinput')
 		// const addbtn = document.getElementById ( 'add' )
 		// const tasks = document.getElementById ( 'tasks' )
 
@@ -84,7 +115,7 @@
 		// 	tasks.appendChild(task)
 		// 	taskinput.value = ''
 		// 	}
-		// })
-	</script>
+		// }) -->
+	
 </body>
 </html>
