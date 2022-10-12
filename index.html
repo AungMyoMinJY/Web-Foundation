@@ -8,13 +8,52 @@
 		h1 {
 
 		}
-		td {
+		/*td {
 			padding-right: 40px;
-		}
-		td	{
 			padding-bottom: 5px;
+		}*/
+		td:first-child {
+			width: 150px;
+			padding-right: 15px;
+			color: #575a6f;
+
 		}
-	</style>	
+		.r {
+			border-radius: 15px;
+		}
+		.s {
+			border: 1px solid #e6e8ea;
+		}
+		.n {
+			width: 400px;
+		}
+		.spacing {
+			padding: 10px;
+		}
+		.s-btn {
+			padding: 8px 15px;
+			background: #8431D5;
+			color: #ffffff;
+			border-radius: 10px;
+			border: none;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		.s-btn:hover {
+			background: gold;
+		}
+		.reset-btn {
+			background: none;
+			border: none;
+			color: #8431D5;
+
+			cursor: pointer;
+		}
+		.reset-btn:hover {
+			color: gold;
+			text-decoration: underline;
+		}
+	</style>
 </head>
 <body>
 	<h1>Student Registration Form</h1>
@@ -22,30 +61,32 @@
 	<form action="#">
 		<table>
 			<tr>
-				<td><label for="name">Name</label></td>
-				<td><input required type="text" placeholder="နာမည်" name="name"	id="name"></td>
+				<td align="right"><label for="name">Name</label></td>
+				<td><input class="n r s spacing" required type="text" placeholder="နာမည်" name="name"	id="name "></td>
 			</tr>
 			<tr>
-				<td><label for="dob">Date of Birth</label></td>
-				<td><input type="date" name="dob" id="dob"></td>
+				<td align="right"><label for="dob">Date of Birth</label></td>
+				<td><input class="r s spacing" type="date" name="dob" id="dob"></td>
 			</tr>
 
 			<tr>
-				<td>Gender</td>
-				<td><label for="male">Male</label>
-					<input type="radio" name="gender" id="male">
-					<label for="female">Female</label>
+				<td align="right">Gender</td>
+				<td>
+					<input  type="radio" name="gender" id="male">
+					<label class="spacing" for="male">Male</label>
+					
 					<input type="radio" name="gender" id="female">
+					<label class="spacing" for="female">Female</label>
 				</td>
 			</tr>
 			<tr>
-				<td><label for="email">Email</label></td>
-				<td><input type="email" name="email" id="email"></td>
+				<td align="right"><label for="email">Email</label></td>
+				<td><input class="n r s spacing" type="email" name="email" id="email"></td>
 			</tr>
 			<tr>
-				<td><label for="class">Class</label></td>
+				<td align="right"><label  for="class">Class</label></td>
 				<td>
-					<select name="calss" id="class">
+					<select class="n r s spacing" name="calss" id="class">
 						<option value="">Choose Class</option>
 						<option value="kg">Kinder Garden</option>
 						<option value="g1">Grade 1</option>
@@ -56,18 +97,19 @@
 				</td>
 			</tr>
 				<tr>
-				<td><label for="pp">Profile Picture</label></td>
-			<td><input type="file" name="pp" id="pp"></td>
+				<td align="right"><label for="pp">Profile Picture</label></td>
+			<td><input class="spacing" type="file" name="pp" id="pp"></td>
 			</tr>
 			<tr>
-				<td><label for="address">Address</label></td>
-				<td><textarea name="address" id="address" cols="30" rows="5" placeholder="လိပ်စာဖြည့်ရန်"></textarea>
+				<td align="right" valign="top" ><label for="address">Address</label></td>
+				<td><textarea class="n r s spacing" name="address" id="address" cols="30" rows="5" placeholder="လိပ်စာဖြည့်ရန်"></textarea>
 				</td>
 			</tr>
 			<tr>
+				<td></td>
 				<td colspan="2">
-					<input type="submit" value="submit">
-					<input type="reset" value="reset">
+					<input class="s-btn" type="submit" value="submit">
+					<input class="reset-btn" type="reset" value="reset">
 				</td>
 			</tr>
 		</table>
