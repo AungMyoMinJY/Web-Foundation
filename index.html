@@ -3,116 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Student Registeration Form</title>
+	<title>Navigation Style</title>
+
 	<style>
-		h1 {
-
+		body {
+			background: whitesmoke;
+			margin: 0;
 		}
-		/*td {
-			padding-right: 40px;
-			padding-bottom: 5px;
-		}*/
-		td:first-child {
-			width: 150px;
-			padding-right: 15px;
-			color: #575a6f;
-
+		nav {
+			background: #ffffff;
+			border-bottom: 1px solid #e3e3e3;
+			display: flex;
+			justify-content: space-between;
 		}
-		.r {
-			border-radius: 15px;
+		ul {
+			margin: 0;
+			display: flex;
 		}
-		.s {
-			border: 1px solid #e6e8ea;
+		nav ul li {
+			list-style: none;
 		}
-		.n {
-			width: 400px;
-		}
-		.spacing {
+		nav ul li a {
+			text-decoration: none;
 			padding: 10px;
+			display: inline-block;
+			color: red;
 		}
-		.s-btn {
-			padding: 8px 15px;
-			background: #8431D5;
-			color: #ffffff;
-			border-radius: 10px;
-			border: none;
-			text-transform: uppercase;
-			cursor: pointer;
-		}
-		.s-btn:hover {
-			background: gold;
-		}
-		.reset-btn {
-			background: none;
-			border: none;
-			color: #8431D5;
-
-			cursor: pointer;
-		}
-		.reset-btn:hover {
-			color: gold;
-			text-decoration: underline;
+		nav ul li a:hover {
+			border-bottom: 2px solid red;
+			padding-bottom: 8px;
 		}
 	</style>
 </head>
+
 <body>
-	<h1>Student Registration Form</h1>
+	<nav>
+		<a href="#">
+			<img src="logo.png" alt="">
+		</a>
+			
+		<ul>
 
-	<form action="#">
-		<table>
-			<tr>
-				<td align="right"><label for="name">Name</label></td>
-				<td><input class="n r s spacing" required type="text" placeholder="နာမည်" name="name"	id="name "></td>
-			</tr>
-			<tr>
-				<td align="right"><label for="dob">Date of Birth</label></td>
-				<td><input class="r s spacing" type="date" name="dob" id="dob"></td>
-			</tr>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Gallery</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
 
-			<tr>
-				<td align="right">Gender</td>
-				<td>
-					<input  type="radio" name="gender" id="male">
-					<label class="spacing" for="male">Male</label>
-					
-					<input type="radio" name="gender" id="female">
-					<label class="spacing" for="female">Female</label>
-				</td>
-			</tr>
-			<tr>
-				<td align="right"><label for="email">Email</label></td>
-				<td><input class="n r s spacing" type="email" name="email" id="email"></td>
-			</tr>
-			<tr>
-				<td align="right"><label  for="class">Class</label></td>
-				<td>
-					<select class="n r s spacing" name="calss" id="class">
-						<option value="">Choose Class</option>
-						<option value="kg">Kinder Garden</option>
-						<option value="g1">Grade 1</option>
-						<option value="g2">Grade 2</option>
-						<option value="g3">Grade 3</option>
-						<option value="g4">Grade 4</option>
-					</select>
-				</td>
-			</tr>
-				<tr>
-				<td align="right"><label for="pp">Profile Picture</label></td>
-			<td><input class="spacing" type="file" name="pp" id="pp"></td>
-			</tr>
-			<tr>
-				<td align="right" valign="top" ><label for="address">Address</label></td>
-				<td><textarea class="n r s spacing" name="address" id="address" cols="30" rows="5" placeholder="လိပ်စာဖြည့်ရန်"></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td colspan="2">
-					<input class="s-btn" type="submit" value="submit">
-					<input class="reset-btn" type="reset" value="reset">
-				</td>
-			</tr>
-		</table>
-	</form>
+	<a href="#">Join Us</a>
+
 </body>
 </html>
